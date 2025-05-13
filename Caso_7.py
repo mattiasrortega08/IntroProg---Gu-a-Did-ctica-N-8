@@ -3,13 +3,11 @@ def control_ventas():
     productos = 5
     dias = 4
 
-    # Inicializa las ventas por kiosco y producto
     ventas = [[[0 for _ in range(productos)] for _ in range(kioscos)] for _ in range(dias)]
 
     print("Control de ventas en kioscos estudiantiles de la UAM")
     print("----------------------------------------------------")
 
-    # Registro de ventas
     for dia in range(dias):
         print(f"\nDía {dia + 1}")
         for kiosco in range(kioscos):
@@ -18,7 +16,6 @@ def control_ventas():
                 mensaje = f"    Ventas del producto {producto + 1}: "
                 ventas[dia][kiosco][producto] = solicitar_entero(mensaje)
 
-    # Cálculo y muestra de resultados
     for dia in range(dias):
         print(f"\nResultados del Día {dia + 1}")
         total_dia = 0
@@ -32,7 +29,6 @@ def control_ventas():
             total_dia += total_kiosco
         print(f"  Total general del día {dia + 1}: {total_dia}")
 
-    # Cálculo del total vendido por producto en cada kiosco
     print("\nResumen total por kiosco y producto:")
     for kiosco in range(kioscos):
         print(f"\nKiosco {kiosco + 1}")
@@ -54,5 +50,4 @@ def solicitar_entero(mensaje):
             print("Entrada inválida. Por favor, ingrese un número entero.")
 
 
-# Llamada directa a la función principal
 control_ventas()    

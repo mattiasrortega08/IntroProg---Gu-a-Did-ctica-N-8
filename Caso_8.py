@@ -3,7 +3,6 @@ def main():
     turnos = ["Mañana", "Tarde", "Noche"]
     dias = 7
 
-    # Inicializar consumo acumulado por edificio
     consumo_edificios = {edificio: 0 for edificio in edificios}
 
     for dia in range(1, dias + 1):
